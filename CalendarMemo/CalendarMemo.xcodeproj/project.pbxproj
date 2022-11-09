@@ -13,6 +13,7 @@
 		65E40C90291A9C6000B204D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E40C8E291A9C6000B204D8 /* Main.storyboard */; };
 		65E40C92291A9C6200B204D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65E40C91291A9C6200B204D8 /* Assets.xcassets */; };
 		65E40C95291A9C6200B204D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E40C93291A9C6200B204D8 /* LaunchScreen.storyboard */; };
+		E7CDF2D924F34B8E983EE1FE /* Pods_CalendarMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D030A8DD94E7096A51E61129 /* Pods_CalendarMemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		65E40C91291A9C6200B204D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65E40C94291A9C6200B204D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65E40C96291A9C6200B204D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8400578EEB38D1876FC851A4 /* Pods-CalendarMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarMemo.release.xcconfig"; path = "Target Support Files/Pods-CalendarMemo/Pods-CalendarMemo.release.xcconfig"; sourceTree = "<group>"; };
+		977E1B7EC186FC4D0FE5F2C9 /* Pods-CalendarMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarMemo.debug.xcconfig"; path = "Target Support Files/Pods-CalendarMemo/Pods-CalendarMemo.debug.xcconfig"; sourceTree = "<group>"; };
+		D030A8DD94E7096A51E61129 /* Pods_CalendarMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7CDF2D924F34B8E983EE1FE /* Pods_CalendarMemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F691E77447EF34C9D9ACB65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D030A8DD94E7096A51E61129 /* Pods_CalendarMemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62D5CE60187329378C749684 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				977E1B7EC186FC4D0FE5F2C9 /* Pods-CalendarMemo.debug.xcconfig */,
+				8400578EEB38D1876FC851A4 /* Pods-CalendarMemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		65E40C7C291A9C6000B204D8 = {
 			isa = PBXGroup;
 			children = (
 				65E40C87291A9C6000B204D8 /* CalendarMemo */,
 				65E40C86291A9C6000B204D8 /* Products */,
+				62D5CE60187329378C749684 /* Pods */,
+				1F691E77447EF34C9D9ACB65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65E40C99291A9C6200B204D8 /* Build configuration list for PBXNativeTarget "CalendarMemo" */;
 			buildPhases = (
+				A996C794DF302F945C9264A1 /* [CP] Check Pods Manifest.lock */,
 				65E40C81291A9C6000B204D8 /* Sources */,
 				65E40C82291A9C6000B204D8 /* Frameworks */,
 				65E40C83291A9C6000B204D8 /* Resources */,
+				DE071F9C9CCDF649031D8945 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A996C794DF302F945C9264A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CalendarMemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE071F9C9CCDF649031D8945 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CalendarMemo/Pods-CalendarMemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CalendarMemo/Pods-CalendarMemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CalendarMemo/Pods-CalendarMemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		65E40C81291A9C6000B204D8 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		65E40C9A291A9C6200B204D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 977E1B7EC186FC4D0FE5F2C9 /* Pods-CalendarMemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +381,7 @@
 		};
 		65E40C9B291A9C6200B204D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8400578EEB38D1876FC851A4 /* Pods-CalendarMemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
