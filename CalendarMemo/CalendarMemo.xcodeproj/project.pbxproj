@@ -56,7 +56,6 @@
 				977E1B7EC186FC4D0FE5F2C9 /* Pods-CalendarMemo.debug.xcconfig */,
 				8400578EEB38D1876FC851A4 /* Pods-CalendarMemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +80,39 @@
 		65E40C87291A9C6000B204D8 /* CalendarMemo */ = {
 			isa = PBXGroup;
 			children = (
-				65E40C88291A9C6000B204D8 /* AppDelegate.swift */,
-				65E40C8A291A9C6000B204D8 /* SceneDelegate.swift */,
-				65E40C8C291A9C6000B204D8 /* ViewController.swift */,
-				65E40C8E291A9C6000B204D8 /* Main.storyboard */,
-				65E40C91291A9C6200B204D8 /* Assets.xcassets */,
-				65E40C93291A9C6200B204D8 /* LaunchScreen.storyboard */,
-				65E40C96291A9C6200B204D8 /* Info.plist */,
+				65E4DC94291BBCE6005602FC /* Common */,
+				65E4DC93291BBCDA005602FC /* Main */,
+				65E4DC92291BBCBA005602FC /* Resource */,
 			);
 			path = CalendarMemo;
+			sourceTree = "<group>";
+		};
+		65E4DC92291BBCBA005602FC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				65E40C96291A9C6200B204D8 /* Info.plist */,
+				65E40C91291A9C6200B204D8 /* Assets.xcassets */,
+				65E40C8A291A9C6000B204D8 /* SceneDelegate.swift */,
+				65E40C88291A9C6000B204D8 /* AppDelegate.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		65E4DC93291BBCDA005602FC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				65E40C8E291A9C6000B204D8 /* Main.storyboard */,
+				65E40C8C291A9C6000B204D8 /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		65E4DC94291BBCE6005602FC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				65E40C93291A9C6200B204D8 /* LaunchScreen.storyboard */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,7 +382,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6GK6PL55U2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CalendarMemo/Info.plist;
+				INFOPLIST_FILE = CalendarMemo/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -389,7 +412,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6GK6PL55U2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CalendarMemo/Info.plist;
+				INFOPLIST_FILE = CalendarMemo/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
