@@ -13,11 +13,14 @@ class EditViewController: UIViewController {
     @IBOutlet weak var contentsView: UITextView!
     @IBOutlet weak var closeImage: UIImageView!
     
+    var selectedDate: String!
+    var selectedContents: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dateLabel.text = "2022.11.09."
-        contentsView.text = "hi"
+        dateLabel.text = selectedDate
+        contentsView.text = selectedContents
         
         // X mark Image Event
         let closeImageTapGesture = UITapGestureRecognizer(target: self, action: #selector(closePage))

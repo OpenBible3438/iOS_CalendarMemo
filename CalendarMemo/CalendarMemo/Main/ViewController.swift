@@ -13,12 +13,21 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
     @IBOutlet weak var calendarView: FSCalendar!
     @IBOutlet weak var contentsView: UITextView!
     
+    var selectedDate: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        contentsView.text = "텍스트 입력"
+        selectedDate = changeDateFormat(date: Date())
+        contentsView.text = selectedDate
         
         setCalendarUI()
+    }
+    
+    // 달력 날짜 선택 이벤트
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        selectedDate = changeDateFormat(date: date)
+        contentsView.text = changeDateFormat(date: date)
     }
     
     @IBAction func tapTextView(_ sender: Any) {
@@ -26,6 +35,8 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
         let editVC = UIStoryboard(name: "EditViewController", bundle: nil).instantiateViewController(identifier: "EditViewController") as! EditViewController
         editVC.modalTransitionStyle = .coverVertical
         editVC.modalPresentationStyle = .fullScreen
+        editVC.selectedDate = selectedDate
+        editVC.selectedContents = contentsView.text
         self.present(editVC, animated: true, completion: nil)
     }
     
@@ -61,6 +72,13 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
         // 날짜 선택될 때의 원 모서리
         //self.calendarView.appearance.borderRadius = 0.0
         
+    }
+    
+    // Date -> yyyy.mm.dd.
+    func changeDateFormat(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy.MM.dd."
+        return dateFormatter.string(from: date)
     }
 
 }
