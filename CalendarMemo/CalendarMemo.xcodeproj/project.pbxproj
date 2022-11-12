@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		659AB74F291BD56C0046294C /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659AB74E291BD56C0046294C /* EditViewController.swift */; };
+		659AB751291BD5950046294C /* EditViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659AB750291BD5950046294C /* EditViewController.storyboard */; };
 		65E40C89291A9C6000B204D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E40C88291A9C6000B204D8 /* AppDelegate.swift */; };
 		65E40C8B291A9C6000B204D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E40C8A291A9C6000B204D8 /* SceneDelegate.swift */; };
 		65E40C8D291A9C6000B204D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E40C8C291A9C6000B204D8 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		659AB74E291BD56C0046294C /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		659AB750291BD5950046294C /* EditViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditViewController.storyboard; sourceTree = "<group>"; };
 		65E40C85291A9C6000B204D8 /* CalendarMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalendarMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E40C88291A9C6000B204D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65E40C8A291A9C6000B204D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		659AB74D291BD5390046294C /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				659AB74E291BD56C0046294C /* EditViewController.swift */,
+				659AB750291BD5950046294C /* EditViewController.storyboard */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
 		65E40C7C291A9C6000B204D8 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +93,7 @@
 		65E40C87291A9C6000B204D8 /* CalendarMemo */ = {
 			isa = PBXGroup;
 			children = (
+				659AB74D291BD5390046294C /* Edit */,
 				65E4DC94291BBCE6005602FC /* Common */,
 				65E4DC93291BBCDA005602FC /* Main */,
 				65E4DC92291BBCBA005602FC /* Resource */,
@@ -176,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65E40C95291A9C6200B204D8 /* LaunchScreen.storyboard in Resources */,
+				659AB751291BD5950046294C /* EditViewController.storyboard in Resources */,
 				65E40C92291A9C6200B204D8 /* Assets.xcassets in Resources */,
 				65E40C90291A9C6000B204D8 /* Main.storyboard in Resources */,
 			);
@@ -230,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				659AB74F291BD56C0046294C /* EditViewController.swift in Sources */,
 				65E40C8D291A9C6000B204D8 /* ViewController.swift in Sources */,
 				65E40C89291A9C6000B204D8 /* AppDelegate.swift in Sources */,
 				65E40C8B291A9C6000B204D8 /* SceneDelegate.swift in Sources */,

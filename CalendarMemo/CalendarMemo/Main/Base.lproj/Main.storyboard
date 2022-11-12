@@ -26,7 +26,26 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FdN-9a-qrS">
                                         <rect key="frame" x="0.0" y="409" width="414" height="409"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uQm-XE-UTg">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <gestureRecognizers/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="uQm-XE-UTg" secondAttribute="trailing" id="ZEy-by-HBi"/>
+                                            <constraint firstAttribute="bottom" secondItem="uQm-XE-UTg" secondAttribute="bottom" id="exR-ZQ-s0u"/>
+                                            <constraint firstItem="uQm-XE-UTg" firstAttribute="leading" secondItem="FdN-9a-qrS" secondAttribute="leading" id="g7k-vG-fTM"/>
+                                            <constraint firstItem="uQm-XE-UTg" firstAttribute="top" secondItem="FdN-9a-qrS" secondAttribute="top" id="vSZ-Yt-Q29"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Mh0-pT-2lV" appends="YES" id="Jaf-d2-4Xa"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -42,14 +61,23 @@
                     </view>
                     <connections>
                         <outlet property="calendarView" destination="MGV-fA-97j" id="27M-f5-ZTQ"/>
+                        <outlet property="contentsView" destination="uQm-XE-UTg" id="fa0-7Z-NeY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Mh0-pT-2lV">
+                    <connections>
+                        <action selector="tapTextView:" destination="BYZ-38-t0r" id="hbJ-fc-5GT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="61" y="92"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
